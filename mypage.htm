@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My page</title>
+</head>
+<style>
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .centered-div {
+        width: 50%;
+        padding: 5%;
+    }
+    
+    .centered-image {
+        display: block;  
+        margin: 0 auto;  
+        width: 50%;
+    }
+
+    .centered-text {
+        text-align: center;
+    }
+    h1 {
+        font-size: 2vw;
+    }
+    h3 {
+        font-size: 1.7vw;
+    }
+    p {
+        font-size: 1.5vw;
+    }
+    .spin-shrink {
+       border-radius: 50%;
+       transition: transform 1s ease, width 1s ease, height 1s ease;
+    }
+
+    .spin-shrink:hover {
+        transform: scale(2) rotate(360deg);
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation: colorChange 1s ease infinite;
+        z-index: -1;
+        background: linear-gradient(to bottom right, yellow, red)
+    }
+
+    /* @keyframes colorChange { 
+        0% { background-color: #ff5733; }   
+        16.67% { background-color: #33ff57; } 
+        33.33% { background-color: #3357ff; } 
+        50% { background-color: #ff33a1; }    
+        66.67% { background-color: #f9ff33; } 
+        83.33% { background-color: #33fff5; } 
+        100% { background-color: #ff5733; }   
+    } */
+
+</style>
+<body style="">
+    <div class="container background">
+        <div class="centered-div" style="background-color:rgba(255, 255, 255, 0.75)">
+            <h3></h3>
+            <a href="myimage.gif" target="_blank">
+                <img src="myimage.gif" style="width: 25%;" class="centered-image spin-shrink">
+            </a>
+            <h3 class="centered-text">About me</h3>
+            <p class="centered-text">
+                ชื่อ: ชยธร พฤกษ์รัตนนภา<br>
+                รหัสนศ.: 6509611635<br>
+                วันเกิด: 24 พฤษภาคม 2547<br>
+                คณะ: วิทยาศาสตร์และเทคโนโลยี<br>
+                สาขา: วิทยาการคอมพิวเตอร์<br>
+                ชั้นปี: 3<br>
+            </p>
+            <h3 class="centered-text">Contact</h3>
+            <p class="centered-text">
+                Email: chayatorn.pru@dome.tu.ac.th<br>
+                Mobile: 0820329354<br>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
